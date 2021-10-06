@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F6885E5-CF39-4D67-BB37-DC436A36D8E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SystemHotelowy</RootNamespace>
+    <AssemblyName>SystemHotelowy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dania.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DaniaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaniaForm.Designer.cs">
+      <DependentUpon>DaniaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klienci.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KlienciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KlienciForm.Designer.cs">
+      <DependentUpon>KlienciForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogowanieAdministracja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogowanieAdministracja.Designer.cs">
+      <DependentUpon>LogowanieAdministracja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogowanieGastronomia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogowanieGastronomia.Designer.cs">
+      <DependentUpon>LogowanieGastronomia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogowanieRecepcja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogowanieRecepcja.Designer.cs">
+      <DependentUpon>LogowanieRecepcja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogowanieSprzatanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogowanieSprzatanie.Designer.cs">
+      <DependentUpon>LogowanieSprzatanie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meldunki.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MeldunkiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeldunkiForm.Designer.cs">
+      <DependentUpon>MeldunkiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdministracja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuAdministracja.Designer.cs">
+      <DependentUpon>MenuAdministracja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGastronomia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGastronomia.Designer.cs">
+      <DependentUpon>MenuGastronomia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGlowne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGlowne.Designer.cs">
+      <DependentUpon>MenuGlowne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuRecepcji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuRecepcji.Designer.cs">
+      <DependentUpon>MenuRecepcji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuStatystyki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStatystyki.Designer.cs">
+      <DependentUpon>MenuStatystyki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelHotel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelHotel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelHotel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelHotel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelHotel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OblozenieObiektuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OblozenieObiektuForm.Designer.cs">
+      <DependentUpon>OblozenieObiektuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pokoje.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PokojeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PokojeForm.Designer.cs">
+      <DependentUpon>PokojeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pracownicy.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PracownicyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PracownicyForm.Designer.cs">
+      <DependentUpon>PracownicyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrzychodyZaDaniaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrzychodyZaDaniaForm.Designer.cs">
+      <DependentUpon>PrzychodyZaDaniaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrzychodyZaPobytForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrzychodyZaPobytForm.Designer.cs">
+      <DependentUpon>PrzychodyZaPobytForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrzychodyZaUslugiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrzychodyZaUslugiForm.Designer.cs">
+      <DependentUpon>PrzychodyZaUslugiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrzychodyZaWszystkoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrzychodyZaWszystkoForm.Designer.cs">
+      <DependentUpon>PrzychodyZaWszystkoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RachunkiZaDania.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RachunkiZaDaniaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RachunkiZaDaniaForm.Designer.cs">
+      <DependentUpon>RachunkiZaDaniaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RachunkiZaPobyt.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RachunkiZaPobytForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RachunkiZaPobytForm.Designer.cs">
+      <DependentUpon>RachunkiZaPobytForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RachunkiZaUslugi.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RachunkiZaUslugiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RachunkiZaUslugiForm.Designer.cs">
+      <DependentUpon>RachunkiZaUslugiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rezerwacje.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RezerwacjeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RezerwacjeForm.Designer.cs">
+      <DependentUpon>RezerwacjeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SprzatanieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SprzatanieForm.Designer.cs">
+      <DependentUpon>SprzatanieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Uslugi.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UslugiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UslugiForm.Designer.cs">
+      <DependentUpon>UslugiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uzytkownicy.cs">
+      <DependentUpon>ModelHotel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UzytkownicyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UzytkownicyForm.Designer.cs">
+      <DependentUpon>UzytkownicyForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DaniaForm.resx">
+      <DependentUpon>DaniaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KlienciForm.resx">
+      <DependentUpon>KlienciForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogowanieAdministracja.resx">
+      <DependentUpon>LogowanieAdministracja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogowanieGastronomia.resx">
+      <DependentUpon>LogowanieGastronomia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogowanieRecepcja.resx">
+      <DependentUpon>LogowanieRecepcja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogowanieSprzatanie.resx">
+      <DependentUpon>LogowanieSprzatanie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeldunkiForm.resx">
+      <DependentUpon>MeldunkiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuAdministracja.resx">
+      <DependentUpon>MenuAdministracja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGastronomia.resx">
+      <DependentUpon>MenuGastronomia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGlowne.resx">
+      <DependentUpon>MenuGlowne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuRecepcji.resx">
+      <DependentUpon>MenuRecepcji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStatystyki.resx">
+      <DependentUpon>MenuStatystyki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OblozenieObiektuForm.resx">
+      <DependentUpon>OblozenieObiektuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PokojeForm.resx">
+      <DependentUpon>PokojeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PracownicyForm.resx">
+      <DependentUpon>PracownicyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PrzychodyZaDaniaForm.resx">
+      <DependentUpon>PrzychodyZaDaniaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrzychodyZaPobytForm.resx">
+      <DependentUpon>PrzychodyZaPobytForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrzychodyZaUslugiForm.resx">
+      <DependentUpon>PrzychodyZaUslugiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrzychodyZaWszystkoForm.resx">
+      <DependentUpon>PrzychodyZaWszystkoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RachunkiZaDaniaForm.resx">
+      <DependentUpon>RachunkiZaDaniaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RachunkiZaPobytForm.resx">
+      <DependentUpon>RachunkiZaPobytForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RachunkiZaUslugiForm.resx">
+      <DependentUpon>RachunkiZaUslugiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RezerwacjeForm.resx">
+      <DependentUpon>RezerwacjeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SprzatanieForm.resx">
+      <DependentUpon>SprzatanieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UslugiForm.resx">
+      <DependentUpon>UslugiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UzytkownicyForm.resx">
+      <DependentUpon>UzytkownicyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="ModelHotel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelHotel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelHotel.edmx.diagram">
+      <DependentUpon>ModelHotel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelHotel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelHotel.edmx</DependentUpon>
+      <LastGenOutput>ModelHotel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelHotel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelHotel.edmx</DependentUpon>
+      <LastGenOutput>ModelHotel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ten projekt zawiera odwołania do pakietów NuGet, których nie ma na tym komputerze. Użyj przywracania pakietów NuGet, aby je pobrać. Aby uzyskać więcej informacji, zobacz http://go.microsoft.com/fwlink/?LinkID=322105. Brakujący plik: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

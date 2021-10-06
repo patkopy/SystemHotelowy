@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b63ac78a24834e818240225507558b91" Name="Diagram1">
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Dania" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Klienci" Width="1.5" PointX="0.875" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Meldunki" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Pokoje" Width="1.5" PointX="5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Pracownicy" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.RachunkiZaDania" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.RachunkiZaPobyt" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.RachunkiZaUslugi" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Rezerwacje" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Uslugi" Width="1.5" PointX="7.125" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="INZ2020HotelePKModel.Uzytkownicy" Width="1.5" PointX="6.75" PointY="13.125" IsExpanded="true" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaDania_Dania" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaDania_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaUslugi_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_Rezerwacje_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_Meldunki_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_Meldunki_Rezerwacje" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaPobyt_Meldunki" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_Rezerwacje_Pokoje" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaDania_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaPobyt_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaUslugi_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_Rezerwacje_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_Uzytkownicy_Pracownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="INZ2020HotelePKModel.FK_RachunkiZaUslugi_Uslugi" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
